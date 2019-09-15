@@ -1,0 +1,34 @@
+.loading {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.confirm-container {
+    width: 50%;
+    margin: auto;
+    top: 40%;
+    position: relative;
+}
+
+.contents {
+    text-align: center;
+}
+
+.spacer {
+    padding-top: 125px;
+}
+
+.small-spacer {
+    padding-top: 50px;
+}
+
+.success-msg {
+    width: 100%;
+}
+
+.loginButton { 
+    font-size: larger !important;
+}

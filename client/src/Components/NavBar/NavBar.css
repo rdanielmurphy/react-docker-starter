@@ -1,0 +1,25 @@
+.menu-item {
+    padding:15px;
+}
+
+.left-drawer {
+    width: 300px;
+    margin-top: 30px;
+}
+
+.menu-item-text {
+    display: inline !important;
+}
+
+.menu-button {
+    margin-left: -12;
+    margin-right: 20;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.user-name {
+    padding-right: 10px;
+}

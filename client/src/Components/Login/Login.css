@@ -1,0 +1,29 @@
+.root {
+  width: 400px;
+  margin: auto auto;
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+}
+
+.paper {
+  margin: 10px auto;
+  padding: 14px;
+  cursor: pointer;
+}
+
+.facebook-icon, .google-icon, .email-icon {
+  font-size: 32px;
+}
+
+.email-icon {
+  color: gray;
+}
+
+.facebook-icon {
+  color: Dodgerblue;
+}
+
+.google-icon {
+  color: #E54D4E;
+}

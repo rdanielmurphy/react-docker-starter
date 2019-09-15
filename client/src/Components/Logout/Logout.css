@@ -1,0 +1,7 @@
+.logout-container {
+    width: 600px;
+    margin: auto auto;
+    position: relative;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+}
