@@ -23,8 +23,6 @@ passport.use(new GoogleStrategy({
     callbackURL: "http://localhost:8000/public/auth/google/callback",
     scope: ['profile', 'email']
 }, function (accessToken, refreshToken, profile, cb) {
-    console.log('profile', profile);
-
     let email = "dummyemail";
     if (profile.emails && profile.emails.length > 0) {
         email = profile.emails[0].value;
@@ -52,7 +50,6 @@ passport.use(new FacebookStrategy({
     scope: ['email']
 },
     function (accessToken, refreshToken, profile, cb) {
-        console.log('profile', profile);
         User.findOrCreate({ facebookId: profile.id }, {
             facebookId: profile.id, displayName: profile.displayName,
             facebookJson: JSON.stringify(profile._json), emailVerified: true
@@ -139,7 +136,6 @@ passport.use(
 
 // https://stackoverflow.com/questions/13335881/redirecting-to-previous-page-after-authentication-in-node-js-using-passport-js
 router.route('/auth/google/callback').get((req, res, next) => {
-    console.log('redirect', req.query.redirect);
     var redirect = req.query.redirect;
     if (redirect) {
         req.session.redirectTo = redirect;
@@ -176,7 +172,6 @@ router.route('/auth/facebook').get(passport.authenticate('facebook', { session: 
 // access was granted, the user will be logged in.  Otherwise,
 // authentication has failed.
 router.route('/auth/facebook/callback').get((req, res, next) => {
-    console.log('redirect', req.query.redirect);
     var redirect = req.query.redirect;
     if (redirect) {
         req.session.redirectTo = redirect;
